@@ -16,7 +16,7 @@ public Properties prop;
 	  FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
 
 	  
-	  Properties prop=new Properties();
+	   prop=new Properties();
 	  prop.load(fs);
 	  
 	  String browserName= prop.getProperty("browser");
@@ -43,7 +43,7 @@ public Properties prop;
 	  
 	 }
 	 @BeforeMethod
-	 public void launchbrowserurl() throws IOException {
+	 public void launchBrowserandUrl() throws IOException {
 		initializeDriver();
 		driver.get(prop.getProperty("url"));
 	 }

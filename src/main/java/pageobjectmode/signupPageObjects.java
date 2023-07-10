@@ -14,7 +14,9 @@ public class signupPageObjects {
 	 private  By nextButton=By.xpath("//span[contains(text(),'Next')]");
 	 
 	 private By selectEmployee=By.xpath("//select[@name='CompanyEmployees']");
-	 
+	 private By selectcountry = By.xpath("//input[@name='CompanyName']");
+	 private By companyName=By.xpath("//input[@name='CompanyName']");
+	 private By SignuppageConfirmation = By.xpath("//h2[@id='answer-2-more-questions-and-well-get-you-into-your-free-trial']");
 
 	 public signupPageObjects(WebDriver driver) {
 	  
@@ -51,5 +53,14 @@ public class signupPageObjects {
 	  
 	  return driver.findElement(selectEmployee);
 	  
+	 }
+	 public WebElement selectcountry () {
+		 return driver.findElement(selectcountry);
+	 }
+	 public WebElement entercompanyname() {
+		return driver.findElement(companyName) ;
+	 }
+	 public WebElement SignuppageConfirmation() {
+		 return driver.findElement(SignuppageConfirmation);
 	 }
 }
